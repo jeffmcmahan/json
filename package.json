@@ -1,0 +1,10 @@
+{
+  "name": "json",
+  "dependencies": {
+    "esbuild": "^0.11.18"
+  },
+  "scripts": {
+    "test": "deno run main.ts",
+    "build": "sh ./build.sh"
+  }
+}
