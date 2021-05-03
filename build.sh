@@ -1,3 +1,4 @@
+# BROWSER JS BUILD
 # Build sourcemap, no --minify, and include tests.
 cd src
 ../node_modules/.bin/esbuild main.src.ts \
@@ -15,3 +16,13 @@ cd src
 # 	--bundle \
 #	--format=esm \
 # --outfile=../dist/json.mjs
+
+# WASM BUILD
+cd ../
+rm -r ./wasm/assembly/**/*
+cp -r ./src/. ./wasm/assembly/
+cd wasm/assembly
+mv main.ts index.ts
+npm run asbuild
+# ^^ fails because of explicit deno-style ".ts" imports
+# @todo - strip the file extensions after copying

@@ -1,10 +1,14 @@
 {
   "name": "json",
-  "dependencies": {
-    "esbuild": "^0.11.18"
-  },
   "scripts": {
     "test": "deno run main.ts",
     "build": "sh ./build.sh"
+  },
+  "dependencies": {
+    "@assemblyscript/loader": "^0.18.30",
+    "esbuild": "^0.11.18"
+  },
+  "devDependencies": {
+    "assemblyscript": "^0.18.30"
   }
 }
