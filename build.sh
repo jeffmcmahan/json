@@ -21,6 +21,7 @@ cd src
 cd ../
 rm -r ./wasm/assembly/**/*
 cp -r ./src/. ./wasm/assembly/
+cd wasm && rm -rf .git
 cd wasm/assembly
 mv main.ts index.ts
 npm run asbuild
